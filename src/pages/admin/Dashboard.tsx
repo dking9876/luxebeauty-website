@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Lock, Calendar as CalendarIcon, ChevronLeft, ChevronRight, Clock, User, X, Plus, Trash2 } from 'lucide-react'
+import { Lock, ChevronLeft, ChevronRight, User, X, Plus, Trash2 } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 import type { Booking, Service } from '../../lib/supabase'
 import { format, startOfWeek, endOfWeek, eachDayOfInterval, isToday, addWeeks, subWeeks, subMonths } from 'date-fns'
