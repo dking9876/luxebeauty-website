@@ -428,25 +428,25 @@ export default function BookOnline() {
                             <div className="bg-white p-6 rounded-sm border border-gold/10 mb-8">
                                 <h3 className="font-serif text-charcoal mb-4">הבחירה שלכם</h3>
                                 <div className="space-y-2 text-sm">
-                                    <div className="flex items-center justify-between text-charcoal-light">
-                                        <span>{selectedService.title}</span>
+                                    <div className="flex items-center justify-between">
                                         <span className="font-medium text-charcoal">שירות:</span>
+                                        <span className="text-charcoal-light">{selectedService.title}</span>
                                     </div>
-                                    <div className="flex items-center justify-between text-charcoal-light">
-                                        <span>{format(selectedDate, 'EEEE, d בMMMM yyyy', { locale: he })}</span>
+                                    <div className="flex items-center justify-between">
                                         <span className="font-medium text-charcoal">תאריך:</span>
+                                        <span className="text-charcoal-light">{format(selectedDate, 'EEEE, d בMMMM yyyy', { locale: he })}</span>
                                     </div>
-                                    <div className="flex items-center justify-between text-charcoal-light">
-                                        <span>{selectedTime}</span>
+                                    <div className="flex items-center justify-between">
                                         <span className="font-medium text-charcoal">שעה:</span>
+                                        <span className="text-charcoal-light">{selectedTime}</span>
                                     </div>
-                                    <div className="flex items-center justify-between text-charcoal-light">
-                                        <span>{selectedService.duration} דקות</span>
+                                    <div className="flex items-center justify-between">
                                         <span className="font-medium text-charcoal">משך:</span>
+                                        <span className="text-charcoal-light">{selectedService.duration} דקות</span>
                                     </div>
-                                    <div className="flex items-center justify-between text-charcoal-light">
-                                        <span>₪{selectedService.price}</span>
+                                    <div className="flex items-center justify-between">
                                         <span className="font-medium text-charcoal">מחיר:</span>
+                                        <span className="text-gold font-medium">₪{selectedService.price}</span>
                                     </div>
                                 </div>
                             </div>
@@ -547,27 +547,27 @@ export default function BookOnline() {
                                 <h3 className="font-serif text-charcoal mb-4">פרטי התור</h3>
                                 <div className="space-y-2 text-sm">
                                     <div className="flex justify-between">
-                                        <span className="text-charcoal font-medium">{selectedService?.title}</span>
                                         <span className="text-charcoal-light">שירות</span>
+                                        <span className="text-charcoal font-medium">{selectedService?.title}</span>
                                     </div>
                                     <div className="flex justify-between">
+                                        <span className="text-charcoal-light">תאריך</span>
                                         <span className="text-charcoal font-medium">
                                             {selectedDate && format(selectedDate, 'd בMMMM yyyy', { locale: he })}
                                         </span>
-                                        <span className="text-charcoal-light">תאריך</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span className="text-charcoal font-medium">{selectedTime}</span>
                                         <span className="text-charcoal-light">שעה</span>
+                                        <span className="text-charcoal font-medium">{selectedTime}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span className="text-charcoal font-medium">{selectedService?.duration} דק׳</span>
                                         <span className="text-charcoal-light">משך</span>
+                                        <span className="text-charcoal font-medium">{selectedService?.duration} דק׳</span>
                                     </div>
                                     <div className="border-t border-gold/10 pt-2 mt-2">
                                         <div className="flex justify-between">
-                                            <span className="text-gold font-medium">₪{selectedService?.price}</span>
                                             <span className="text-charcoal font-medium">סה״כ</span>
+                                            <span className="text-gold font-medium">₪{selectedService?.price}</span>
                                         </div>
                                     </div>
                                 </div>
