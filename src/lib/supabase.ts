@@ -1,12 +1,13 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
+// Fallback to empty strings if env vars missing - app will use demo data
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co'
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key'
 
-console.log('Initializing Supabase...', { urlPresent: !!supabaseUrl, keyPresent: !!supabaseAnonKey });
+const envVarsPresent = import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY
 
-if (!supabaseUrl || !supabaseAnonKey) {
-    console.error('Supabase URL or Key missing!');
+if (!envVarsPresent) {
+    console.warn('Supabase env vars not configured - using demo mode');
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
